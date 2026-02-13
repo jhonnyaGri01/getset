@@ -1,0 +1,45 @@
+public class Televisor {
+    private String marca;
+    private int pulgadas;
+    private int volumen;
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPulgadas() {
+        return pulgadas;
+    }
+
+    public void setPulgadas(int pulgadas) {
+        if (pulgadas > 0) {
+            this.pulgadas = pulgadas;
+        }
+    }
+
+    public int getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(int volumen) {
+        if (volumen >= 0 && volumen <= 100) {
+            this.volumen = volumen;
+        }
+    }
+
+    public void subirVolumen() {
+        if (volumen < 100) {
+            volumen++;
+        }
+    }
+
+    public void bajarVolumen() {
+        if (volumen > 0) {
+            volumen--;
+        }
+    }
+}
